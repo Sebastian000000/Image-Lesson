@@ -64,10 +64,10 @@ void setup() {
   //Ratio 1.0 similar to style="width:100%" (websites)
   //Ratio of 0-1 similar to style="height:auto" (websites)
   //
-  //Popuklation of rect()
-  imageX1 = width*0;
+  //Population of rect()
+  imageX1 = width*1/4;
   imageY1 = height*0;
-  imageWidth1 = width-1; //CANVAS (0,0) means point doesn't match to rectangle, missing outline on two sides
+  imageWidth1 = (width-1)*1/2; //CANVAS (0,0) means point doesn't match to rectangle, missing outline on two sides
   imageHeight1 = (height-1)*1/2;
   imageX2 = width*0;
   imageY2 = height*1/2;
@@ -79,14 +79,14 @@ void setup() {
   picHeightAdjusted1 = imageHeight1 * imageHeightRatio1;
   println(imageX1, imageY1, picWidthAdjusted1, picHeightAdjusted1);
    picWidthAdjusted2 = imageWidth2 * imageWidthRatio2;
-  picHeightAdjusted2 = imageHeight2 * imageHeightRatio2;
+  picHeightAdjusted2 = imageHeight2 ;//* imageHeightRatio2;
   println(imageX2, imageY2, picWidthAdjusted2, picHeightAdjusted2);
 }//End setup
 //
 void draw() {
-  rect(imageX1, imageY1, imageWidth1, imageHeight1); //Top half
-  rect(imageX2, imageY2, imageWidth2, imageHeight2); //Bottom half
-//image(pic1, imageX1, imageY1, imageWidth1, imageHeight1);
+  //rect(imageX1, imageY1, imageWidth1, imageHeight1); //Top half
+  //rect(imageX2, imageY2, imageWidth2, imageHeight2); //Bottom half
+
 image(pic1, imageX1, imageY1, picWidthAdjusted1, picHeightAdjusted1);
 image(pic2, imageX2, imageY2, picWidthAdjusted2, picHeightAdjusted2);
 }//End draw
